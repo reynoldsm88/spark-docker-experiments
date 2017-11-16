@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker build -f master.dockerfile -t reynoldsm88/spark-master .
+docker build -f worker.dockerfile -t reynoldsm88/spark-worker .
+
