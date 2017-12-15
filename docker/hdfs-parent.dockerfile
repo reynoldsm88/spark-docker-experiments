@@ -14,9 +14,11 @@ ENV JAVA $JDK_HOME/bin/java
 
 RUN curl -o hadoop.tgz http://mirror.stjschools.org/public/apache/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz && tar -xf hadoop.tgz && rm hadoop.tgz
 
-# copy our configs & scripts
+RUN pwd
 
-RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/master/hadoop/etc/hadoop/core-site.xml && mv core-site.xml $HADOOP_PREFIX/etc/hadoop
+RUN yum install -y net-tools
+
 RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/master/hadoop/etc/hadoop/hdfs-site.xml && mv hdfs-site.xml $HADOOP_PREFIX/etc/hadoop
+RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/master/hadoop/etc/hadoop/core-site.xml && mv core-site.xml $HADOOP_PREFIX/etc/hadoop
 
 RUN mkdir -p $HDFS_DATA_ROOT
