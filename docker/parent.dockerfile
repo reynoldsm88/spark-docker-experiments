@@ -10,6 +10,10 @@ ENV SCALA_VERSION 2.11.11
 ENV SPARK_VERSION 2.2.0
 ENV HADOOP_VERSION hadoop2.7
 ENV SPARK_DISTRO_VERSION $SPARK_VERSION-bin-$HADOOP_VERSION
+ENV SPARK_APPS_DIR /etc/spark/apps
+
+RUN mkdir -p /etc/spark/apps
+VOLUME $SPARK_APPS_DIR
 
 # download software from lightbend and apache
 RUN curl -o scala.tgz https://downloads.lightbend.com/scala/$SCALA_VERSION/scala-$SCALA_VERSION.tgz && tar -xf scala.tgz && rm scala.tgz
