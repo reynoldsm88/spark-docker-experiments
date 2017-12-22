@@ -3,6 +3,6 @@
 docker build -f docker/parent.dockerfile -t reynoldsm88/spark-parent .
 docker build -f docker/master.dockerfile -t reynoldsm88/spark-master .
 docker build -f docker/worker.dockerfile -t reynoldsm88/spark-worker .
-docker build -f docker/hdfs-parent.dockerfile -t reynoldsm88/hdfs-parent .
-docker build -f docker/hdfs-namenode.dockerfile -t reynoldsm88/hdfs-namenode .
-docker build -f docker/hdfs-datanode.dockerfile -t reynoldsm88/hdfs-datanode .
+#docker build -f docker/hdfs-parent.dockerfile -t reynoldsm88/hdfs-parent .
+#docker build -f docker/hdfs-namenode.dockerfile -t reynoldsm88/hdfs-namenode .
+#docker build -f docker/hdfs-datanode.dockerfile -t reynoldsm88/hdfs-datanode .
