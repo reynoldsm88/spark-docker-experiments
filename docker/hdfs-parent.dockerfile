@@ -18,7 +18,7 @@ RUN pwd
 
 RUN yum install -y net-tools
 
-RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/master/hadoop/etc/hadoop/hdfs-site.xml && mv hdfs-site.xml $HADOOP_PREFIX/etc/hadoop
-RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/master/hadoop/etc/hadoop/core-site.xml && mv core-site.xml $HADOOP_PREFIX/etc/hadoop
+RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/temp/hadoop/etc/hadoop/hdfs-site.xml && mv hdfs-site.xml $HADOOP_PREFIX/etc/hadoop
+RUN curl -O https://raw.githubusercontent.com/reynoldsm88/spark-docker-experiments/temp/hadoop/etc/hadoop/core-site.xml && mv core-site.xml $HADOOP_PREFIX/etc/hadoop
 
 RUN mkdir -p $HDFS_DATA_ROOT
